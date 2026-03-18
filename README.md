@@ -3,6 +3,8 @@
 # Tech Stack
 
 - React
+- Tailwind
+- Java Spring Boot
 
 # Contributors
 
