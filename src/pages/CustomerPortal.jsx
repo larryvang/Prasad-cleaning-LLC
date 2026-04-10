@@ -13,7 +13,7 @@ export default function CustomerPortal() {
     const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false)
     const [startDate, setStartDate] = useState('')
     const [endDate, setEndDate] = useState('')
-    const [scheduleErrors, setScheduleErrors] =useState({})
+    const [scheduleErrors, setScheduleErrors] = useState({})
 
 
     // SCRUM 33 Review methods
@@ -77,7 +77,7 @@ export default function CustomerPortal() {
     }
     
     // Handler for date input changes
-    const handleDataChange = (e) => {
+    const handleDateChange = (e) => {
         const { name, value} = e.target
         if (name === 'startDate') {
             setStartDate(value)
@@ -333,8 +333,8 @@ export default function CustomerPortal() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 zIndex: 1000
-        }}>
-        <div style={{
+            }}>
+            <div style={{
             backgroundColor: 'white',
             borderRadius: '16px',
             padding: '2rem',
@@ -442,8 +442,8 @@ export default function CustomerPortal() {
                     Cancel
                 </span>
             </div>
+            </div>
         </div>
-    </div>
     )}
     </div>
     )
