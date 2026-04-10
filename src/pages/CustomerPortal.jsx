@@ -107,6 +107,15 @@ export default function CustomerPortal() {
         return Object.keys(newErrors).length === 0
     }
 
+    // Submit function for scheduling
+    const submitSchedule = () => {
+        if (!validateSchedule()) {
+            return
+        }
+        console.log({ startDate, endDate })
+        toggleScheduleModal()
+    }
+
     return(
         <div>
         {/*scrum 39 to navigate to landing page from logo
