@@ -58,13 +58,6 @@ export default function CustomerPortal() {
         return Object.keys(newErrors).length === 0
     }
 
-    // SCRUM-75: function to open and close the modal
-    const toggleScheduleModal = () => {
-        setIsScheduleModalOpen(prev => !prev)
-        setScheduleErrors({})
-        setStartDate('')
-        setEndDate('')
-    }
 
     // Submits review after validation
     const submitReview = () => {
@@ -73,6 +66,25 @@ export default function CustomerPortal() {
         }
         console.log({ customerName, reviewText, rating})
         toggleModal()
+    }
+
+    // SCRUM-75: function to open and close the modal
+    const toggleScheduleModal = () => {
+        setIsScheduleModalOpen(prev => !prev)
+        setScheduleErrors({})
+        setStartDate('')
+        setEndDate('')
+    }
+    
+    // Handler for date input changes
+    const handleDataChange = (e) => {
+        const { name, value} = e.target
+        if (name === 'startDate') {
+            setStartDate(value)
+        }
+        if (name === 'endDate') {
+            setEndDate(value)
+        }
     }
 
     return(
