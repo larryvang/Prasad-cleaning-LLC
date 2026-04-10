@@ -151,7 +151,26 @@ export default function CustomerPortal() {
                 Leave a Review
             </button>
         </div>
-
+        {/* SCRUM-75: schedule appointment button*/}
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <button
+                onClick={toggleScheduleModal}
+                style={{
+                    backgroundColor: '#7ec8e3',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '12px',
+                    padding: '1rem 2rem',
+                    fontWeight: 'bold',
+                    fontSize: '0.85rem',
+                    letterSpacing: '0.05em',
+                    textTransform: 'uppercase',
+                    cursor: 'pointer'
+                }}
+            >
+                Schedule Appointment
+            </button>
+        </div>
         {/*CREATE REMAINING BUTTONS UNDER HERE*/}
 
 
