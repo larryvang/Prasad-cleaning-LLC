@@ -9,6 +9,13 @@ export default function CustomerPortal() {
     const [rating, setRating] = useState(0)
     const [errors, setErrors] = useState({})
 
+    //SCRUM 75: State Variables
+    const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false)
+    const [startDate, setStartDate] = useState('')
+    const [endDate, setEndDate] = useState('')
+    const [scheduleErrors, setScheduleErrors] =useState({})
+
+
     // SCRUM 33 Review methods
     // Opens and closes the modal
     const toggleModal = () => {
@@ -49,6 +56,14 @@ export default function CustomerPortal() {
         }
         setErrors(newErrors)
         return Object.keys(newErrors).length === 0
+    }
+
+    // SCRUM-75: function to open and close the modal
+    const toggleScheduleModal = () => {
+        setIsScheduleModalOpen(prev => !prev)
+        setScheduleErrors({})
+        setStartDate('')
+        setEndDate('')
     }
 
     // Submits review after validation
