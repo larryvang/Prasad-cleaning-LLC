@@ -178,6 +178,26 @@ export default function CustomerPortal() {
                 Schedule Appointment
             </button>
         </div>
+        {/* SCRUM-76: contact information button */}
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+             <button
+                onClick={toggleContactModal}
+                style={{
+                    backgroundColor: '#f5a623',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '12px',
+                    padding: '1rem 2rem',
+                    fontWeight: 'bold',
+                    fontSize: '0.85rem',
+                    letterSpacing: '0.05em',
+                    textTransform: 'uppercase',
+                    cursor: 'pointer'
+                }}
+            >
+                Contact Information
+            </button>
+        </div>
         {/*CREATE REMAINING BUTTONS UNDER HERE*/}
 
 
@@ -349,7 +369,7 @@ export default function CustomerPortal() {
             maxWidth: '460px',
             boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
             textAlign: 'center'
-        }}>
+            }}>
             <p style={{
                 fontSize: '0.8rem',
                 color: '#888',
@@ -451,7 +471,7 @@ export default function CustomerPortal() {
             </div>
             </div>
         </div>
-    )}
+        )}
     </div>
     )
 }
