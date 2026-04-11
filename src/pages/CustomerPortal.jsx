@@ -15,8 +15,11 @@ export default function CustomerPortal() {
     const [endDate, setEndDate] = useState('')
     const [scheduleErrors, setScheduleErrors] = useState({})
 
-    // SCRUM 76: State for contact modal
+    // SCRUM 76: State for contact modal and variables
     const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+    const ownerName = 'Nigel Prasad'
+    const phoneNumber = '(XXX) XXX-XXXX' // To be changed
+    const email = 'PrasadsCleaning@gmail.com'
 
     // SCRUM 33 Review methods
     // Opens and closes the modal
@@ -514,9 +517,9 @@ export default function CustomerPortal() {
             </h2>
 
             <div style={{ marginBottom: '1rem', fontSize: '1rem', lineHeight: '1.8' }}>
-                <p><strong>Owner's Name:</strong> Nigel Prasad</p>
-                <p><strong>Phone Number:</strong> (xxx) xxx-xxxx</p> {/*TO BE CHANGED*/}
-                <p><strong>Email:</strong> PrasadsCleaning@gmail.com</p>
+                <p><strong>Owner's Name:</strong> {ownerName}</p>
+                <p><strong>Phone Number:</strong> {phoneNumber}</p>
+                <p><strong>Email:</strong> {email}</p>
             </div>
 
             <div>
